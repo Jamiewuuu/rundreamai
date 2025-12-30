@@ -196,48 +196,58 @@
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl"></div>
 
       <!-- Geometric Shapes -->
-      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div id="shapes-container" class="absolute inset-0 overflow-hidden pointer-events-none">
         <!-- Shape 1 - Large Indigo -->
-        <div class="absolute left-[-10%] md:left-[-5%] top-[15%] md:top-[20%] shape-1">
-          <div class="animate-float-1" style="width: 600px; height: 140px;">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(99,102,241,0.15)]">
-              <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+        <div class="absolute left-[-10%] md:left-[-5%] top-[15%] md:top-[20%] shape-1" data-shape data-inertia="0.8">
+          <div class="inertia-wrapper" style="width: 600px; height: 140px;">
+            <div class="animate-float-1" style="width: 100%; height: 100%;">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(99,102,241,0.15)]">
+                <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Shape 2 - Rose -->
-        <div class="absolute right-[-5%] md:right-[0%] top-[70%] md:top-[75%] shape-2">
-          <div class="animate-float-2" style="width: 500px; height: 120px;">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-rose-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(244,63,94,0.15)]">
-              <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+        <div class="absolute right-[-5%] md:right-[0%] top-[70%] md:top-[75%] shape-2" data-shape data-inertia="0.6">
+          <div class="inertia-wrapper" style="width: 500px; height: 120px;">
+            <div class="animate-float-2" style="width: 100%; height: 100%;">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-rose-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(244,63,94,0.15)]">
+                <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Shape 3 - Violet -->
-        <div class="absolute left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%] shape-3">
-          <div class="animate-float-3" style="width: 300px; height: 80px;">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(139,92,246,0.15)]">
-              <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+        <div class="absolute left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%] shape-3" data-shape data-inertia="1.0">
+          <div class="inertia-wrapper" style="width: 300px; height: 80px;">
+            <div class="animate-float-3" style="width: 100%; height: 100%;">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(139,92,246,0.15)]">
+                <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Shape 4 - Amber -->
-        <div class="absolute right-[15%] md:right-[20%] top-[10%] md:top-[15%] shape-4">
-          <div class="animate-float-4" style="width: 200px; height: 60px;">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(245,158,11,0.15)]">
-              <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+        <div class="absolute right-[15%] md:right-[20%] top-[10%] md:top-[15%] shape-4" data-shape data-inertia="1.2">
+          <div class="inertia-wrapper" style="width: 200px; height: 60px;">
+            <div class="animate-float-4" style="width: 100%; height: 100%;">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(245,158,11,0.15)]">
+                <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Shape 5 - Cyan -->
-        <div class="absolute left-[20%] md:left-[25%] top-[5%] md:top-[10%] shape-5">
-          <div class="animate-float-5" style="width: 150px; height: 40px;">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(6,182,212,0.15)]">
-              <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+        <div class="absolute left-[20%] md:left-[25%] top-[5%] md:top-[10%] shape-5" data-shape data-inertia="1.5">
+          <div class="inertia-wrapper" style="width: 150px; height: 40px;">
+            <div class="animate-float-5" style="width: 100%; height: 100%;">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-transparent backdrop-blur-[2px] border border-white/10 shadow-[0_8px_32px_0_rgba(6,182,212,0.15)]">
+                <div class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15),transparent_70%)]"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -958,6 +968,83 @@
         nav.classList.add('border-white/5');
       }
     });
+
+    // Scroll inertia effect for geometric shapes
+    (function() {
+      const wrappers = document.querySelectorAll('.inertia-wrapper');
+
+      if (wrappers.length === 0) {
+        console.warn('No inertia-wrapper elements found');
+        return;
+      }
+
+      // State for each wrapper
+      const states = [];
+      wrappers.forEach((wrapper, index) => {
+        const parent = wrapper.closest('[data-shape]');
+        const inertia = parent ? parseFloat(parent.dataset.inertia) || 1 : 1;
+        const dirX = index % 2 === 0 ? 1 : -1;
+        states.push({
+          el: wrapper,
+          inertia: inertia,
+          dirX: dirX,
+          x: 0,
+          y: 0,
+          targetX: 0,
+          targetY: 0
+        });
+      });
+
+      let lastY = window.scrollY;
+      let velocity = 0;
+      let ticking = false;
+
+      // Animation loop
+      function animate() {
+        states.forEach(s => {
+          // Lerp to target
+          s.x += (s.targetX - s.x) * 0.08;
+          s.y += (s.targetY - s.y) * 0.08;
+
+          // Apply transform
+          s.el.style.transform = `translate3d(${s.x.toFixed(2)}px, ${s.y.toFixed(2)}px, 0)`;
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      // Handle scroll
+      function onScroll() {
+        const currentY = window.scrollY;
+        velocity = currentY - lastY;
+        lastY = currentY;
+
+        // Apply velocity to targets
+        states.forEach(s => {
+          // Vertical: opposite to scroll direction for float effect
+          s.targetY = -velocity * s.inertia * 4;
+          s.targetY = Math.max(-100, Math.min(100, s.targetY));
+
+          // Horizontal: slight drift
+          s.targetX = velocity * s.inertia * s.dirX;
+          s.targetX = Math.max(-50, Math.min(50, s.targetX));
+        });
+
+        // Decay targets
+        setTimeout(() => {
+          states.forEach(s => {
+            s.targetX = 0;
+            s.targetY = 0;
+          });
+        }, 50);
+      }
+
+      // Start
+      animate();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      console.log('Inertia effect initialized for', wrappers.length, 'shapes');
+    })();
   </script>
 
 </body>
