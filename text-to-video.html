@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Video - AI Video Generator | Rundream AI</title>
+  <meta name="description" content="Transform your text descriptions into stunning AI-generated videos. Create professional video content from text prompts instantly with Rundream AI.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              900: '#030303',
+              800: '#0a0a0a',
+              700: '#121212',
+              600: '#1a1a1a',
+              500: '#222222',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up {
+      animation: fadeUp 1s cubic-bezier(0.25, 0.4, 0.25, 1) forwards;
+      opacity: 0;
+    }
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.2s; }
+    .fade-up-3 { animation-delay: 0.3s; }
+  </style>
+</head>
+<body class="bg-dark-900 text-white antialiased">
+
+  <!-- Component: Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-rose-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-play text-white text-sm"></i>
+          </div>
+          <span class="text-xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Rundream AI</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <!-- Video Dropdown -->
+          <div class="relative group">
+            <a href="#" class="text-white font-medium transition-colors flex items-center gap-1">
+              Video
+              <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+            </a>
+            <!-- Dropdown Menu -->
+            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-dark-800/95 backdrop-blur-md rounded-xl border border-white/[0.08] py-2 min-w-[160px] shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+                <a href="text-to-video.html" class="flex items-center gap-3 px-4 py-2.5 text-white bg-white/[0.05] transition-colors">
+                  <i class="fas fa-font text-sm w-4"></i>
+                  <span>Text to Video</span>
+                </a>
+                <a href="image-to-video.html" class="flex items-center gap-3 px-4 py-2.5 text-white/60 hover:text-white hover:bg-white/[0.05] transition-colors">
+                  <i class="fas fa-image text-sm w-4"></i>
+                  <span>Image to Video</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="text-white/60 hover:text-white font-medium transition-colors">Image</a>
+          <a href="#" class="text-white/60 hover:text-white font-medium transition-colors">My Creations</a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hidden sm:inline-flex text-white/60 hover:text-white font-medium transition-colors">Log in</a>
+          <a href="#" class="inline-flex items-center px-4 py-2 bg-white text-dark-900 font-medium rounded-full hover:bg-white/90 transition-all hover:scale-105">
+            Get Started Free
+          </a>
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden p-2 text-white/60 hover:text-white">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- /Component: Navigation -->
+
+  <main class="pt-16">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[calc(100vh-64px)] w-full flex items-center justify-center overflow-hidden bg-dark-900">
+      <!-- Background Gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-violet-500/[0.05] via-transparent to-indigo-500/[0.05] blur-3xl"></div>
+
+      <div class="relative z-10 container mx-auto px-4 md:px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+
+          <!-- Header -->
+          <div class="text-center mb-10">
+            <div class="animate-fade-up fade-up-1 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 mb-6">
+              <i class="fas fa-video text-violet-400"></i>
+              <span class="text-sm text-violet-300">Text to Video</span>
+            </div>
+            <h1 class="animate-fade-up fade-up-2 text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+              <span class="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">Turn Your Words Into</span>
+              <br>
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-white/90 to-indigo-300">Stunning Videos</span>
+            </h1>
+            <p class="animate-fade-up fade-up-3 text-lg text-white/40 max-w-2xl mx-auto">
+              Describe any scene, and our AI will generate a professional video for you. No camera, no editing skills required.
+            </p>
+          </div>
+
+          <!-- Creation Panel -->
+          <div class="animate-fade-up fade-up-3">
+            <div class="bg-dark-800/80 backdrop-blur-xl rounded-2xl border border-white/[0.08] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+
+              <!-- Prompt Input -->
+              <div class="mb-6">
+                <label class="block text-sm text-white/40 mb-2">Describe your video</label>
+                <textarea
+                  id="promptInput"
+                  rows="4"
+                  placeholder="A cinematic shot of a golden sunset over the ocean, waves gently crashing on the shore, seagulls flying in the distance..."
+                  class="w-full bg-dark-700/50 text-white placeholder-white/30 px-4 py-3 rounded-xl border border-white/[0.08] focus:border-violet-500/50 focus:outline-none resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Options Row -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <!-- Duration -->
+                <div>
+                  <label class="block text-sm text-white/40 mb-2">Duration</label>
+                  <select class="w-full bg-dark-700/50 text-white px-4 py-3 rounded-xl border border-white/[0.08] focus:border-violet-500/50 focus:outline-none appearance-none cursor-pointer">
+                    <option value="5">5 seconds</option>
+                    <option value="10" selected>10 seconds</option>
+                    <option value="15">15 seconds</option>
+                  </select>
+                </div>
+                <!-- Aspect Ratio -->
+                <div>
+                  <label class="block text-sm text-white/40 mb-2">Aspect Ratio</label>
+                  <select class="w-full bg-dark-700/50 text-white px-4 py-3 rounded-xl border border-white/[0.08] focus:border-violet-500/50 focus:outline-none appearance-none cursor-pointer">
+                    <option value="16:9" selected>16:9 Landscape</option>
+                    <option value="9:16">9:16 Portrait</option>
+                    <option value="1:1">1:1 Square</option>
+                  </select>
+                </div>
+                <!-- Quality -->
+                <div>
+                  <label class="block text-sm text-white/40 mb-2">Quality</label>
+                  <select class="w-full bg-dark-700/50 text-white px-4 py-3 rounded-xl border border-white/[0.08] focus:border-violet-500/50 focus:outline-none appearance-none cursor-pointer">
+                    <option value="720p">720p</option>
+                    <option value="1080p" selected>1080p HD</option>
+                    <option value="4k">4K Ultra HD</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Style Tags -->
+              <div class="mb-6">
+                <label class="block text-sm text-white/40 mb-2">Style (optional)</label>
+                <div class="flex flex-wrap gap-2">
+                  <button onclick="toggleStyle(this)" class="style-tag px-3 py-1.5 rounded-lg text-sm bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] transition-all">
+                    Cinematic
+                  </button>
+                  <button onclick="toggleStyle(this)" class="style-tag px-3 py-1.5 rounded-lg text-sm bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] transition-all">
+                    Anime
+                  </button>
+                  <button onclick="toggleStyle(this)" class="style-tag px-3 py-1.5 rounded-lg text-sm bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] transition-all">
+                    Realistic
+                  </button>
+                  <button onclick="toggleStyle(this)" class="style-tag px-3 py-1.5 rounded-lg text-sm bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] transition-all">
+                    3D Render
+                  </button>
+                  <button onclick="toggleStyle(this)" class="style-tag px-3 py-1.5 rounded-lg text-sm bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] transition-all">
+                    Watercolor
+                  </button>
+                </div>
+              </div>
+
+              <!-- Generate Button -->
+              <button onclick="handleGenerate()" class="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-violet-500 to-indigo-500 text-white font-semibold rounded-xl hover:from-violet-600 hover:to-indigo-600 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]">
+                <i class="fas fa-wand-magic-sparkles text-lg"></i>
+                <span class="text-lg">Generate Video</span>
+              </button>
+
+              <!-- Credits Info -->
+              <p class="text-center text-white/30 text-sm mt-4">
+                <i class="fas fa-coins mr-1 text-amber-400"></i>
+                This will use 10 credits
+              </p>
+            </div>
+          </div>
+
+          <!-- Example Prompts -->
+          <div class="mt-8">
+            <p class="text-center text-white/40 text-sm mb-4">Try these examples:</p>
+            <div class="flex flex-wrap justify-center gap-2">
+              <button onclick="setPrompt('A majestic dragon flying through clouds at sunset, cinematic lighting')" class="px-4 py-2 rounded-full bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] hover:text-white/70 text-sm transition-all">
+                <i class="fas fa-dragon mr-2"></i>Dragon in clouds
+              </button>
+              <button onclick="setPrompt('A cozy coffee shop on a rainy day, steam rising from cups, warm ambient lighting')" class="px-4 py-2 rounded-full bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] hover:text-white/70 text-sm transition-all">
+                <i class="fas fa-mug-hot mr-2"></i>Rainy coffee shop
+              </button>
+              <button onclick="setPrompt('Astronaut walking on Mars, red dusty landscape, Earth visible in the sky')" class="px-4 py-2 rounded-full bg-white/[0.03] text-white/50 border border-white/[0.08] hover:bg-white/[0.08] hover:text-white/70 text-sm transition-all">
+                <i class="fas fa-user-astronaut mr-2"></i>Mars exploration
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Component: Footer -->
+  <footer class="bg-dark-900 text-white/40 py-8 border-t border-white/[0.05]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center space-x-2">
+          <div class="w-6 h-6 bg-gradient-to-br from-indigo-500 to-rose-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-play text-white text-xs"></i>
+          </div>
+          <span class="font-bold text-white/60">Rundream AI</span>
+        </div>
+        <p class="text-sm">&copy; 2025 Rundream AI. All rights reserved.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /Component: Footer -->
+
+  <script>
+    // Toggle style tag selection
+    function toggleStyle(button) {
+      button.classList.toggle('bg-violet-500/20');
+      button.classList.toggle('text-violet-300');
+      button.classList.toggle('border-violet-500/30');
+      button.classList.toggle('bg-white/[0.03]');
+      button.classList.toggle('text-white/50');
+      button.classList.toggle('border-white/[0.08]');
+    }
+
+    // Set example prompt
+    function setPrompt(text) {
+      document.getElementById('promptInput').value = text;
+    }
+
+    // Handle generate
+    function handleGenerate() {
+      const prompt = document.getElementById('promptInput').value;
+      if (!prompt.trim()) {
+        alert('Please enter a description for your video');
+        return;
+      }
+      console.log('Generating video with prompt:', prompt);
+      // TODO: Implement actual generation
+    }
+  </script>
+
+</body>
+</html>

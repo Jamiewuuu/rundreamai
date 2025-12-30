@@ -167,7 +167,26 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#" onclick="handleNavigate('video')" class="text-white/60 hover:text-white font-medium transition-colors">Video</a>
+          <!-- Video Dropdown -->
+          <div class="relative group">
+            <a href="#" onclick="handleNavigate('video')" class="text-white/60 hover:text-white font-medium transition-colors flex items-center gap-1">
+              Video
+              <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+            </a>
+            <!-- Dropdown Menu -->
+            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-dark-800/95 backdrop-blur-md rounded-xl border border-white/[0.08] py-2 min-w-[160px] shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+                <a href="text-to-video.html" class="flex items-center gap-3 px-4 py-2.5 text-white/60 hover:text-white hover:bg-white/[0.05] transition-colors">
+                  <i class="fas fa-font text-sm w-4"></i>
+                  <span>Text to Video</span>
+                </a>
+                <a href="image-to-video.html" class="flex items-center gap-3 px-4 py-2.5 text-white/60 hover:text-white hover:bg-white/[0.05] transition-colors">
+                  <i class="fas fa-image text-sm w-4"></i>
+                  <span>Image to Video</span>
+                </a>
+              </div>
+            </div>
+          </div>
           <a href="#" onclick="handleNavigate('image')" class="text-white/60 hover:text-white font-medium transition-colors">Image</a>
           <a href="#" onclick="handleNavigate('creations')" class="text-white/60 hover:text-white font-medium transition-colors">My Creations</a>
         </div>
